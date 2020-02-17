@@ -7,6 +7,8 @@ ruby '2.6.2'
 gem 'rails', '~> 5.2.3'
 # Use postgres as the database for Active Record
 gem 'pg'
+gem 'pg_search'
+gem 'kaminari'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -35,10 +37,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
-gem 'webpacker'
-
-gem 'react-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

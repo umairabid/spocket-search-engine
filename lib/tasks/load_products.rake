@@ -6,9 +6,13 @@ task :load_products, [:filename] => [:environment] do |t, args|
   data = JSON.load file
   if data.length > 0
     Product.delete_all
+    Country.delete_all
+    countries = []
     data.each do |product|
+      countries.push(product["country"])
       Product.create(product)
     end
+    countries.uniq.each {|c| Country.create({name: c})}
     file.close
     puts "Products have been loaded successfully"
   end

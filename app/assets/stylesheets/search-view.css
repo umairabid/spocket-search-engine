@@ -1,0 +1,128 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: absolute;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    position: absolute;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 100%;
+}
+
+aside {
+    position: absolute;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    padding: 12px;
+}
+
+article {
+    position: absolute;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 100%;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 10px;
+    height: 30px;
+}
+
+.search-field {
+    height: 40px;
+    min-width: 400px;
+}
+
+.input-element {
+    display: flex;
+    align-items: center;
+}
+
+.input-element label {
+    padding-left: 12px;
+}
+
+.search-results {
+    width: 100%;
+    height: calc(100% - 60px);
+    top: 0;
+    overflow: auto;
+    padding: 12px;
+}
+
+.pagination {
+    position: absolute;
+    height: 60px;
+    border-top: 1px #ccc solid;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination a, .pagination span.current, .pagination span.gap {
+    float: left;
+    padding: 0 14px;
+    line-height: 38px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #DDD;
+    border-left: none;
+}
+
+.pagination span:first-child {
+    border-left: 1px solid #DDD;
+}
+
+.first{
+    padding : 0;
+    float: none;
+}
+.prev {
+    padding : 0;
+    float: none;
+    border: none;
+}
+.page{
+    padding : 0;
+    float: none;
+    border: none;
+}
+.next{
+    padding : 0;
+    float: none;
+    border: none;
+}
+.last{
+    padding : 0;
+    float: none;
+    border: none;
+}
