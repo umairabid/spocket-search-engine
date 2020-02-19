@@ -23,3 +23,10 @@ To use application
 1. Their is no explicit search trigger in the app and we listen to change event of inputs. To trigger change in input fields you will need to blur away from the input. I originally intended to trigger search while typing in input field on text change like in react but this is not how it works natively.
 
 2. You can find the sort and filters in sidebar of the app
+
+### Testing
+
+To run tests
+
+1. Setup test db `RAILS_ENV=test rake db:setup`
+2. Since all the logic is encapsulated in products service, run `rails test test/services/products_service_test.rb` to run all test cases
